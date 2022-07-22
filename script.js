@@ -9,6 +9,7 @@ function lowerCaseName(string) {
 }
 
 function getPokemon(e) {
+    e.preventDefault();
     const name = document.querySelector("#pokemonName").value;
     const pokemonName = lowerCaseName(name);
 
@@ -32,10 +33,10 @@ function getPokemon(e) {
             .catch((err) => {
             document.querySelector("#pokemonCard").innerHTML = `
             <h4>No encontramos el pokemon 😞</h4>
-            <img src="./notFound.jpg" alt="404" class="imageError"/>
+            <img src="./Imagenes/notFound.jpg" alt="404" class="imageError"/>
             `;
             console.log("Pokemon not found", err);
             });
 
-    e.preventDefault();
+    
 }
